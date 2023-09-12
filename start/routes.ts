@@ -26,7 +26,7 @@ Route.post('gettoken', async ({request, response, auth}: HttpContextContract) =>
 
   });
 
-Route.get("/auth", async ({auth, response}: HttpContextContract)=> {
+Route.get("/auth", async ({response}: HttpContextContract)=> {
 return response.ok("Somente usuários autenticados podem acessar");
 
-}).middleware("api");
+}).middleware("auth:api");
