@@ -6,10 +6,12 @@ export default class Admin extends BaseModel {
   public id: number;
 
   @column()
-  public user_id: number;
+  public nome: string;
 
   @column()
-  public nome: string;
+  public user_id: number;
+
+ 
 
 
   @column.dateTime({ autoCreate: true, autoUpdate: true })
