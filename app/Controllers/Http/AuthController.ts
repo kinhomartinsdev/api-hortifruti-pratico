@@ -65,7 +65,7 @@ export default class AuthController {
 
     const userAuth = await auth.use("api").authenticate();
     
-        let data;
+        let data: any;
         switch(userAuth.tipo){
             case  "clientes": 
             const cliente = await Cliente.findByOrFail('user.id' , userAuth.id);
