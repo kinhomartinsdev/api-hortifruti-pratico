@@ -28,7 +28,7 @@ export default class EditClienteValidator {
     telefone: schema.string({trim: true},[
       rules.mobile({locale:["pt-BR"]}),
       rules.maxLength(15),
-      rules.minLength(12),
+      rules.minLength(11),
 
     ]),
       

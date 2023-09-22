@@ -7,19 +7,21 @@ Route.post("/login", "AuthController.login");
 Route.post("/logout", "AuthController.logout");
 Route.post("/cliente/cadastro", "ClientesController.store");
 
-Route.group(()=>{
+
+
+
+
+Route.group(() => {
   Route.get("auth/me", "AuthController.me");
-  Route.put("/cliente" , "ClienteControle.update");
-}
+  Route.get("cidades", "CidadesController.index");
+  Route.get("cidades/id/estabelecimentos",
+  "CidadesController.Estebelecimentos");
 
+  Route.put("/cliente", "ClientesController.update");
+}).middleware("auth");
 
-).middleware('auth');
-
-
-Route.get('/', async () => {
+Route.get("/", async () => {
   return {
-    Horti: 'Fruti',
+    hortifruti: "prático",
   };
-    
-  });
-
+});

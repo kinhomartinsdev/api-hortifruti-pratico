@@ -34,7 +34,7 @@ export default class ClientesController {
     const userAuth  = await auth.use('api').authenticate();
 
     // criando uma transação 
-    const trx = await Database.transaction;
+    const trx = await Database.transaction();
     
     try {
       const user = await User.findByOrFail("id", userAuth.id);
