@@ -14,7 +14,7 @@ export default class CidadesController {
 
 
     }
- public async Estebelecimento ({params, request, response}: HttpContextContract){
+ public async Estebelecimento ({params,response}: HttpContextContract){
 
     const cidade = await Cidade.query().where("id", params.id).preload("estabelecimentos").firstOrFail();
     return response.ok(cidade.estabelecimentos);
