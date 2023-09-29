@@ -10,7 +10,8 @@ export default class extends BaseSchema {
       table.string('descricao').notNullable();      
       table.string('posicao').notNullable();      
       table.boolean('ativo').defaultTo(true);
-      table.integer('estabelecimento_id').notNullable().unsigned().references('id').inTable('estabelecimentos').onDelete('RESTRICT');
+      table.integer('estabelecimento_id').notNullable().unsigned().references('id').inTable('estabelecimentos')
+      .onDelete('RESTRICT');
       
       table.timestamps(true, true);     
       table.timestamp('deleted_at').nullable();

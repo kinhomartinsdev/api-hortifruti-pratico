@@ -10,5 +10,4 @@ export default class Estado extends BaseModel {
 
   @column ()
   public uf: string;
-
 }
