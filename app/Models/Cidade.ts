@@ -11,7 +11,7 @@ export default class Cidade extends BaseModel {
   public nome: string;
 
   @column ()
-  public estado_id: string;
+  public estado_id: number;
 
   @column ()
   public ativo: boolean;

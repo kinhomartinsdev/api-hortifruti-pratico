@@ -50,17 +50,17 @@ export default class EstabelecimentoSeeder extends BaseSeeder {
         nome: "Espírito Santo",
         uf: "ES",
       },
-      
+
     ]);
 
     await Cidade.createMany([
       {
         nome: "Aimorés",
-        estado_id: '1',
+        estado_id: 1,
       },
       {
         nome: "Colatina",
-        estado_id: '2',
+        estado_id: 2,
       },
     ]);
      for (let i = 1; i <= 20; i++){
